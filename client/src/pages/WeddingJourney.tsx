@@ -22,6 +22,12 @@ const galleryImages = [
   "/gallery/DSC00001-2.jpg",
   "/gallery/DSC00004-2.jpg",
   "/gallery/DSC00008.jpg",
+  "/gallery/DSC00032.jpg",
+  "/gallery/DSC00126-2.jpg",
+  "/gallery/DSC00144-2.jpg",
+  "/gallery/DSC00177.jpg",
+  "/gallery/DSC00221.jpg",
+  "/gallery/maine_photo.jpg",
   "/DSC00063.jpg",
   "/DSC00029.jpg"
 ];
@@ -325,7 +331,7 @@ export default function WeddingJourney() {
         <ChapterHeading chapter="Moments" title="A Visual Journey" subtitle="Capturing the Beauty of Daba Village" />
         
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 border-2 border-stone-100 p-2 lg:p-4 bg-white/50">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 border-2 border-stone-100 p-2 lg:p-4 bg-white/50">
             {galleryImages.map((image, index) => (
               <div 
                 key={index} 
