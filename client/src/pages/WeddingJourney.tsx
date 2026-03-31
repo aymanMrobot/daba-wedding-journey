@@ -15,21 +15,13 @@ const morningImg = "/DSC00208.jpg"; // Tent/Garden lounge
 // Gallery images
 const galleryImages = [
   "/gallery/DSC00059.jpg",
-  "/gallery/DSC00060.jpg",
   "/gallery/DSC00066.jpg",
   "/gallery/DSC00067.jpg",
   "/gallery/DSC00072.jpg",
-  "/gallery/DSC00075.jpg",
   "/gallery/DSC00077.jpg",
-  "/gallery/DSC00089.jpg",
   "/gallery/DSC00001-2.jpg",
-  "/gallery/DSC00002-2.jpg",
-  "/gallery/DSC00003-2.jpg",
   "/gallery/DSC00004-2.jpg",
-  "/gallery/DSC00007-2.jpg",
   "/gallery/DSC00008.jpg",
-  "/gallery/DSC00009-2.jpg",
-  "/gallery/DSC00010-2.jpg",
   "/DSC00063.jpg",
   "/DSC00029.jpg"
 ];
@@ -213,7 +205,7 @@ export default function WeddingJourney() {
 
           <div className="hidden md:flex items-center gap-6">
             <a 
-              href="https://www.instagram.com/daba_village/" 
+              href="https://www.instagram.com/daba.village/" 
               target="_blank" 
               rel="noopener noreferrer"
               className={`text-[11px] uppercase tracking-[0.2em] font-medium hover:text-amber-600 transition-colors text-stone-800`}
@@ -333,7 +325,7 @@ export default function WeddingJourney() {
         <ChapterHeading chapter="Moments" title="A Visual Journey" subtitle="Capturing the Beauty of Daba Village" />
         
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 border-2 border-stone-100 p-2 lg:p-4 bg-white/50">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 border-2 border-stone-100 p-2 lg:p-4 bg-white/50">
             {galleryImages.map((image, index) => (
               <div 
                 key={index} 
@@ -415,16 +407,16 @@ export default function WeddingJourney() {
                 <Phone className="w-5 h-5" />
                 <span className="text-lg font-light tracking-wide">+212 655 699 126</span>
               </a>
-              <a href="mailto:info@dabavillage.com" className="flex items-center gap-3 text-stone-700 hover:text-amber-600 transition-colors">
+              <a href="mailto:villagedaba@gmail.com" className="flex items-center gap-3 text-stone-700 hover:text-amber-600 transition-colors">
                 <Mail className="w-5 h-5" />
-                <span className="text-lg font-light tracking-wide">info@dabavillage.com</span>
+                <span className="text-lg font-light tracking-wide">villagedaba@gmail.com</span>
               </a>
             </div>
           </div>
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
             <a 
-              href="https://www.instagram.com/daba_village/" 
+              href="https://www.instagram.com/daba.village/" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block border-b border-stone-900 pb-1 text-sm uppercase tracking-[0.2em] hover:text-amber-600 hover:border-amber-600 transition-colors"
