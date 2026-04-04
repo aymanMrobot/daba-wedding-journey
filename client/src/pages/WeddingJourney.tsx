@@ -10,6 +10,7 @@ const arrivalImg = "/DSC00005-2.jpg"; // Garden arch
 const processionImg = "/DSC00099.jpg"; // Chairs detail/Aisle
 const unionImg = "/DSC00069.jpg"; // Pool reflection/Ceremony
 const feastImg = "/DSC00361.jpg"; // Long table under vines
+const danceImg = "/DSC00063.jpg"; // Dance floor/Party
 const morningImg = "/DSC00208.jpg"; // Tent/Garden lounge
 
 // Gallery images
@@ -138,20 +139,20 @@ const MenuSection = () => (
       <div className="grid md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-stone-700/50">
         <div className="px-4 pt-8 md:pt-0 hover:-translate-y-2 transition-transform duration-500">
           <span className="text-xs uppercase tracking-[0.3em] text-amber-500 block mb-6">Prologue</span>
-          <h4 className="font-serif text-3xl text-white mb-6">The Arrival</h4>
+          <h4 className="font-serif text-3xl text-white mb-6">The Cocktail Hour</h4>
           <p className="font-light text-stone-400 leading-7">
-            Crispy <span className="text-white font-medium">Briouats</span> with wild herbs &<br/>
-            Charcoal-grilled <span className="text-white font-medium">Kefta</span> skewers<br/>
-            <span className="text-xs italic mt-2 block opacity-70">Served with wood-fired Khobz</span>
+            Signature <span className="text-white font-medium">Welcome Drinks</span> &<br/>
+            An elegant <span className="text-white font-medium">Aperitif</span> with fine appetizers<br/>
+            <span className="text-xs italic mt-2 block opacity-70">Followed by a vibrant Open Bar to set the mood</span>
           </p>
         </div>
         <div className="px-4 pt-8 md:pt-0 hover:-translate-y-2 transition-transform duration-500 delay-100">
           <span className="text-xs uppercase tracking-[0.3em] text-amber-500 block mb-6">The Narrative</span>
-          <h4 className="font-serif text-3xl text-white mb-6">The Main</h4>
+          <h4 className="font-serif text-3xl text-white mb-6">The Main Event</h4>
           <p className="font-light text-stone-400 leading-7">
-            Slow-Roasted <span className="text-white font-medium">Lamb Meshwi</span> falling off the bone &<br/>
-            <span className="text-white font-medium">Royal Couscous</span> with Seven Vegetables<br/>
-            <span className="text-xs italic mt-2 block opacity-70">Infused with Saffron from Taliouine</span>
+            From a relaxed <span className="text-white font-medium">Garden Barbecue</span> to a<br/>
+            Grand <span className="text-white font-medium">Royal Banquet</span> with Slow-Roasted Lamb<br/>
+            <span className="text-xs italic mt-2 block opacity-70">Curated dinner menus tailored to your exquisite taste</span>
           </p>
         </div>
         <div className="px-4 pt-8 md:pt-0 hover:-translate-y-2 transition-transform duration-500 delay-200">
@@ -198,7 +199,7 @@ export default function WeddingJourney() {
           </div>
           
           <div className="hidden md:flex items-center gap-10">
-            {['The Prologue', 'The Union', 'The Feast', 'Epilogue'].map((item) => (
+            {['The Prologue', 'The Union', 'The Feast', 'The Party', 'Epilogue'].map((item) => (
               <button 
                 key={item} 
                 onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
@@ -348,18 +349,31 @@ export default function WeddingJourney() {
         </div>
       </section>
 
-      {/* --- Chapter V: Morning After --- */}
+      {/* --- Chapter V: The Afterparty --- */}
+      <section id="the-party" className="bg-stone-50">
+        <StorySection 
+          chapter="Chapter V"
+          title="The Midnight Rhythm"
+          subtitle="Modern Beats & Dance"
+          reversed={false}
+          image={danceImg}
+          teaser="When the sky turns obsidian and the stars align, the ancient village awakens to a new frequency. Traditional melodies gently fade, giving way to an electrifying contemporary soundscape under the mastery of our DJ."
+          fullText="Beneath the sweeping canopy of night, a state-of-the-art sound system brings the dance floor to life. Here, the traditional seamlessly intertwines with the modern. An open bar serves bespoke cocktails, while curated rhythms keep the energy soaring until the early hours. Lose yourself in the music, celebrate the union with your loved ones, and dance freely in a space where time feels suspended and the night is entirely yours."
+        />
+      </section>
+
+      {/* --- Chapter VI: Morning After --- */}
       <section id="epilogue" className="py-32 bg-[#F5F5F0]">
-        <ChapterHeading chapter="Chapter V" title="The Morning After" subtitle="Renewal & Farewell" />
+        <ChapterHeading chapter="Chapter VI" title="The Morning After" subtitle="Renewal & Farewell" />
         
         <div className="container mx-auto px-6 lg:px-12 grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-12">
             <div className="flex gap-6 group">
               <span className="font-serif text-4xl text-stone-300 italic group-hover:text-amber-500 transition-colors">01</span>
               <div>
-                <h4 className="font-serif text-2xl text-stone-800 mb-2">Brunch & Wellness</h4>
+                <h4 className="font-serif text-2xl text-stone-800 mb-2">Brunch & Recovery</h4>
                 <p className="text-stone-600 font-light leading-relaxed">
-                  Awake to the sounds of nature. Join us for a farewell brunch featuring warm baghrir, honey, and aromatic coffee by the pool.
+                  Awake to the gentle sounds of nature. Gather by the pool for a farewell brunch showcasing warm baghrir with honey and aromatic coffee, or choose a relaxed garden barbecue to reminisce.
                 </p>
               </div>
             </div>
@@ -367,9 +381,9 @@ export default function WeddingJourney() {
             <div className="flex gap-6 group">
               <span className="font-serif text-4xl text-stone-300 italic group-hover:text-amber-500 transition-colors">02</span>
               <div>
-                <h4 className="font-serif text-2xl text-stone-800 mb-2">Hammam Rituals</h4>
+                <h4 className="font-serif text-2xl text-stone-800 mb-2">Yoga & Spa Rituals</h4>
                 <p className="text-stone-600 font-light leading-relaxed">
-                  Before the final departure, wash away the night's revelry in our traditional Hammam. A steam session with black soap for deep renewal.
+                  Rejuvenate mind and body with a collective yoga class in our serene gardens. Follow it up with signature spa treatments or a deep-cleansing session in our traditional Hammam.
                 </p>
               </div>
             </div>
@@ -379,7 +393,7 @@ export default function WeddingJourney() {
               <div>
                 <h4 className="font-serif text-2xl text-stone-800 mb-2">Sunset Stories</h4>
                 <p className="text-stone-600 font-light leading-relaxed">
-                   Engage with the soul of the village. Listen to stories from local elders under the stars before turning the final page.
+                   Engage with the very soul of the village. Unwind to live traditional music and listen to captivating stories from local elders under the stars before turning your final page.
                 </p>
               </div>
             </div>
