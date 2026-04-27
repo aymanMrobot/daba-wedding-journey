@@ -209,10 +209,15 @@ const ProposalSection = () => (
       </div>
 
       <div className="text-center space-y-6">
-        <div className="inline-block border border-amber-500/30 px-12 py-6 mb-4 bg-stone-800/30">
-          <p className="text-sm uppercase tracking-[0.2em] text-amber-500 mb-2">Package Price</p>
-          <p className="font-serif text-4xl text-white">€ X</p>
-        </div>
+        <a 
+          href="https://api.whatsapp.com/send?phone=212655699126&text=I%20would%20like%20to%20request%20a%20custom%20quote%20for%20the%20Luxury%20Riad%20Wedding%20Experience" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-block border border-amber-500/50 px-12 py-6 mb-4 bg-amber-500/10 hover:bg-amber-600 hover:border-amber-600 transition-all duration-300 group cursor-pointer text-center"
+        >
+          <p className="text-sm uppercase tracking-[0.2em] text-amber-500 group-hover:text-amber-100 mb-2 transition-colors">Pricing</p>
+          <p className="font-serif text-3xl md:text-4xl text-white group-hover:text-white transition-colors">Request a Custom Quote</p>
+        </a>
         
         <p className="text-sm text-stone-400 italic">
           *Please note: Alcoholic beverages are not included and would need to be arranged separately.<br />Pricing is determined separately for each client.
