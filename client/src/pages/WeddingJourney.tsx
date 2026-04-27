@@ -169,6 +169,69 @@ const MenuSection = () => (
   </div>
 );
 
+const ProposalSection = () => (
+  <section id="proposal" className="bg-stone-900 text-stone-200 py-32 px-6 relative overflow-hidden">
+    <div className="container mx-auto max-w-4xl relative z-10">
+      <div className="text-center mb-16">
+        <span className="font-serif italic text-2xl text-amber-500/80 mb-4 block">Exclusive Proposal</span>
+        <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">Luxury Riad Wedding Experience</h2>
+        <p className="font-light text-stone-300 leading-relaxed text-lg max-w-2xl mx-auto">
+          We are thrilled at the opportunity to host your celebration and create unforgettable memories in our authentic Moroccan setting.
+        </p>
+      </div>
+
+      <div className="bg-stone-800/50 border border-stone-700/50 p-8 md:p-12 mb-12 rounded-sm">
+        <h3 className="font-serif text-2xl text-white mb-8 text-center">Our Premium Package Includes</h3>
+        <ul className="space-y-4 font-light text-stone-300">
+          {[
+            "Exclusive hire of our Riad for 3 nights stay for up to 10 people with access to a private pool and spa/Hammam with a master suit set up for bride and groom with flower and candels set up and fully staffed with server, cleaners a private chef and a Riad manager with a breakfast included.",
+            "Complimentary spa and massage treatments for the bride and groom (the morning of or day before the wedding).",
+            "Full catering service for your wedding dinner (30 guests).",
+            "Complete event setup (tables, chairs, floral arrangements, decorative elements).",
+            "Our exclusive wedding indoor hall set up or a outdoor under grape vines set up alfresco.",
+            "Dedicated wedding coordination staff throughout your event.",
+            "Traditional horse-mounted greeter to welcome your arriving guests.",
+            "Authentic Dakka Marrakchia musicians to provide a traditional Moroccan welcome.",
+            "Amaria bride and groom elevated grand entrence to the wedding with traditional music.",
+            "Professional henna artist offering customized designs (finger or full hand options).",
+            "Welcome refreshments including mocktails, soft drinks, and fresh juices.",
+            "Traditional mint tea service featuring organic farm-grown herbs, presented in an authentic Moroccan setting with floor seating.",
+            "Private bridal tent for the couple – perfect for photos and greeting guests.",
+            "Post-dinner entertainment featuring live Gnaoua traditional music.",
+            "Professional DJ service for your evening celebration."
+          ].map((item, i) => (
+            <li key={i} className="flex gap-4 items-start">
+              <span className="text-amber-500 mt-1 flex-shrink-0"><Star className="w-4 h-4" /></span>
+              <span className="leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="text-center space-y-6">
+        <div className="inline-block border border-amber-500/30 px-12 py-6 mb-4 bg-stone-800/30">
+          <p className="text-sm uppercase tracking-[0.2em] text-amber-500 mb-2">Package Price</p>
+          <p className="font-serif text-4xl text-white">€ X</p>
+        </div>
+        
+        <p className="text-sm text-stone-400 italic">
+          *Please note: Alcoholic beverages are not included and would need to be arranged separately.<br />Pricing is determined separately for each client.
+        </p>
+        
+        <div className="pt-16 border-t border-stone-800 mt-16">
+          <p className="font-serif text-2xl text-white mb-6">
+            We look forward to helping you create the wedding of your dreams in our beautiful Moroccan oasis.
+          </p>
+          <p className="font-light text-stone-400 text-lg">
+            Warm regards,<br/>
+            <span className="text-white font-medium block mt-2">Daba Riad</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 export default function WeddingJourney() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -199,7 +262,7 @@ export default function WeddingJourney() {
           </div>
           
           <div className="hidden md:flex items-center gap-10">
-            {['The Prologue', 'The Union', 'The Feast', 'The Party', 'Epilogue'].map((item) => (
+            {['The Prologue', 'The Union', 'The Feast', 'The Party', 'Epilogue', 'Proposal'].map((item) => (
               <button 
                 key={item} 
                 onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
@@ -404,6 +467,9 @@ export default function WeddingJourney() {
           </div>
         </div>
       </section>
+
+      {/* --- Proposal Section --- */}
+      <ProposalSection />
 
       {/* --- Footer --- */}
       <footer className="bg-white border-t border-stone-200 py-24 px-6">
